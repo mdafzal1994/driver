@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver//first_modul.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver//first_modul.ko /home/afzal/driver//first_modul.o /home/afzal/driver//first_modul.mod.o;  true
