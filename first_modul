@@ -1,0 +1,6 @@
+obj-m:=first_modul.o
+
+kerneldir = /usr/src/linux-headers-5.4.0-52-generic/
+pwd=/home/afzal/driver/
+build:
+	make -C $(kerneldir) M=$(pwd)

@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/module_param//paramdemo.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/module_param//paramdemo.ko /home/afzal/driver/module_param//paramdemo.o /home/afzal/driver/module_param//paramdemo.mod.o;  true
