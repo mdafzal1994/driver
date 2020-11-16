@@ -1,10 +1,12 @@
-#include<linux/kernel.h>
-#include<linux/module.h>
 #include<linux/init.h>
 
+#include<linux/init.h>
+#include<linux/module.h>
+#include<linux/stat.h>
+#include<linux/kernel.h>
 
 
-//static int add_fun(int a,int b)
+//static int add_fun(int a,int b);
 int add_fun(int a,int b)
 {
 

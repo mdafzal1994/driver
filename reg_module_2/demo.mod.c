@@ -22,7 +22,7 @@ __section(.gnu.linkonce.this_module) = {
 MODULE_INFO(retpoline, "Y");
 #endif
 
-MODULE_INFO(depends, "add");
+MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "91CA781ADBBA9582E0497AD");
+MODULE_INFO(srcversion, "312D4E17D196591D3449194");

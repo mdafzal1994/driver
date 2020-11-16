@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/2nd_module_test//demo.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/2nd_module_test//demo.ko /home/afzal/driver/2nd_module_test//demo.o /home/afzal/driver/2nd_module_test//demo.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/export_symbol/add.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/export_symbol/add.ko /home/afzal/driver/export_symbol/add.o /home/afzal/driver/export_symbol/add.mod.o;  true

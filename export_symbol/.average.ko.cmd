@@ -1,1 +1,1 @@
-cmd_/home/afzal/driver/export_symbol//average.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/export_symbol//average.ko /home/afzal/driver/export_symbol//average.o /home/afzal/driver/export_symbol//average.mod.o;  true
+cmd_/home/afzal/driver/export_symbol/average.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/export_symbol/average.ko /home/afzal/driver/export_symbol/average.o /home/afzal/driver/export_symbol/average.mod.o;  true

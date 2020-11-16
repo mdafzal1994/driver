@@ -1,2 +1,2 @@
-/home/afzal/driver/export_symbol//average.o
+/home/afzal/driver/export_symbol/average.o
 
