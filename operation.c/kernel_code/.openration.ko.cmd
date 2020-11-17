@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/operation.c/kernel_code/openration.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/operation.c/kernel_code/openration.ko /home/afzal/driver/operation.c/kernel_code/openration.o /home/afzal/driver/operation.c/kernel_code/openration.mod.o;  true

@@ -44,11 +44,11 @@ ssize_t my_file_write(struct file *file, const char __user *buf,size_t len, loff
 
 
 struct cdev *mycdev;  //
-dev_t device_no=MKDEV(230,0);
+//dev_t device_no=MKDEV(230,0);
 static int __init init_fun(void)
         {
 
-
+	dev_t device_no=MKDEV(232,0);
 
        printk(KERN_ALERT"init run\n");
          // dev_t device_no=MKDEV(240,0);  //mjor 240 min 0
@@ -72,10 +72,12 @@ static int __init init_fun(void)
 
 
 
-static void __init exit_fun(void)
+static void __exit exit_fun(void)
         {
+		 dev_t device_no=MKDEV(232,0);
            unregister_chrdev_region(device_no,1);
-           printk(KERN_ALERT"exit fun run\n");
+             cdev_del(mycdev);
+           printk(KERN_ALERT"exit fun run device no :  %d \n",device_no);
         }
 
 
