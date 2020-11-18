@@ -15,22 +15,34 @@
 
 char rd_buffer[128];
 char wr_buffer[128];
+
+
+/*void add(int a,int b)
+	{
+	
+	
+	 
+	}
+*/
 int main()
 {
-	int fd=open("/dev/my_deriver2",O_RDWR);  //read write
+	int fd=open("/dev/myd_driver2",O_RDWR);  //read write
         if(fd==-1)
 	{
 	
-	  printf("error : file  not open\n");
+	  printf("error : file  not open  / found \n");
 	  return 0;
 	}
 
-	strcpy(wr_buffer,"hello CDAC ");
+	strcpy(wr_buffer,"33 ");
 
     	printf("data writing to kernel ........\n");
      	write(fd,wr_buffer,128);  	    
 	printf("writing done from user space\n");
+	strcpy(wr_buffer,"22");
 
+     	write(fd,wr_buffer,128);  	    
+	printf("2 nd writing done from user space\n");
 	///////////////////reading /////////////////
 	
 	  read(fd,rd_buffer,128);
