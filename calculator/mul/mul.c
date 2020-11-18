@@ -14,11 +14,11 @@ dev_t device_no;
 char *kernel_buffer;  //
 size_t mem_size=128;  //
 
-int sum=0;
+int mul=1;
 
 int open_fun(struct inode *inode, struct file *file)
 	{
-		printk(KERN_ALERT" \ni am add driver from kernel \n");
+		printk(KERN_ALERT"hi i am mul driver  \n");
 		kernel_buffer=(char*)kmalloc(mem_size,GFP_KERNEL);//Allocate normal kernel ram     
 		if(kernel_buffer==0)
 		{
@@ -35,8 +35,8 @@ ssize_t read_fun(struct file *file, char __user *buf,size_t len, loff_t *ppos)
 		printk(KERN_ALERT"read fun run \n");
                 
                
-	       sprintf(kernel_buffer,"%d",sum);
-               sum=0;
+	       sprintf(kernel_buffer,"%d",mul);
+          mul=1;       
 		copy_to_user(buf,kernel_buffer,mem_size);
 		printk(KERN_ALERT"data write to user space from kernel \n");
 		return mem_size;
@@ -52,8 +52,8 @@ ssize_t write_fun(struct file *file, const char __user *buf,size_t len, loff_t *
                         
 			copy_from_user(kernel_buffer,buf,mem_size);
                   //int *temp=kmalloc(mem_size,GFP_KERNEL);//Allocate normal kernel ram         
-                      sum+=kernel_buffer[0]-'0';
-                     
+                      mul*=kernel_buffer[0]-'0';
+
 			printk(KERN_ALERT"data write : done buf %s\n",buf);
 	         return len;
 	
@@ -80,10 +80,10 @@ static const struct file_operations my_operation= {
 
 static int __init init_fun(void)
 	{
-		printk(KERN_ALERT"enter init fun /n i am add driver  \n");
+		printk(KERN_ALERT"enter init fun \n i am mul driver from kernel \n");
 
-		 device_no=MKDEV(205,0);
-		if(register_chrdev_region(device_no,1,"my driver operation\n")<0)
+		 device_no=MKDEV(205,2);
+		if(register_chrdev_region(device_no,1,"my driver multiply\n")<0)
 		{
 		
 		  printk(KERN_ALERT"error : register not get region \n");

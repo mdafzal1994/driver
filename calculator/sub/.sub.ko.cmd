@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/calculator/sub/sub.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/calculator/sub/sub.ko /home/afzal/driver/calculator/sub/sub.o /home/afzal/driver/calculator/sub/sub.mod.o;  true
