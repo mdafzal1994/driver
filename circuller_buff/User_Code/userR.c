@@ -22,15 +22,17 @@ void my_read()
         }
 	
 	
-	        
+	       printf("max data can read :%d \n HOW many want to read \n",(int)sizeof(rd_buffer));
+	      scanf("%d",&SIZE); 
+	      
       
 
 
 /////////////////////////////////
-        read(fd,rd_buffer,10);
+        read(fd,rd_buffer,SIZE);
           
 
-  printf("read   data from driver   %s\n",rd_buffer);
+  printf("\nread   data from driver   %s\n",rd_buffer);
   SIZE=strlen(rd_buffer);
   printf("No of BYTE READ : %d\n",SIZE);
           close(fd);
