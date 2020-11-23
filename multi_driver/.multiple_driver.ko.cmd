@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/multi_driver/multiple_driver.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/multi_driver/multiple_driver.ko /home/afzal/driver/multi_driver/multiple_driver.o /home/afzal/driver/multi_driver/multiple_driver.mod.o;  true
