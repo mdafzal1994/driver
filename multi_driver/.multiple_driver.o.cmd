@@ -16,18 +16,29 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
   include/linux/compiler-gcc.h \
     $(wildcard include/config/retpoline.h) \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/atomic/sleep.h) \
-    $(wildcard include/config/mmu.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/arch/has/refcount.h) \
-    $(wildcard include/config/panic/timeout.h) \
+  include/linux/module.h \
+    $(wildcard include/config/modules.h) \
+    $(wildcard include/config/sysfs.h) \
+    $(wildcard include/config/modules/tree/lookup.h) \
+    $(wildcard include/config/livepatch.h) \
+    $(wildcard include/config/unused/symbols.h) \
+    $(wildcard include/config/module/sig.h) \
+    $(wildcard include/config/generic/bug.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/smp.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/tree/srcu.h) \
+    $(wildcard include/config/bpf/events.h) \
+    $(wildcard include/config/jump/label.h) \
     $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/event/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
-  include/linux/limits.h \
-  include/uapi/linux/limits.h \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/function/error/injection.h) \
+    $(wildcard include/config/strict/module/rwx.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
   include/linux/types.h \
     $(wildcard include/config/have/uid16.h) \
     $(wildcard include/config/uid16.h) \
@@ -50,15 +61,28 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/x86/32.h) \
   arch/x86/include/uapi/asm/posix_types_64.h \
   include/uapi/asm-generic/posix_types.h \
+  include/linux/poison.h \
+    $(wildcard include/config/illegal/pointer/value.h) \
+    $(wildcard include/config/page/poisoning/zero.h) \
+  include/linux/const.h \
+  include/uapi/linux/const.h \
+  include/linux/kernel.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/mmu.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/arch/has/refcount.h) \
+    $(wildcard include/config/panic/timeout.h) \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  include/linux/limits.h \
+  include/uapi/linux/limits.h \
   include/linux/linkage.h \
   include/linux/stringify.h \
   include/linux/export.h \
     $(wildcard include/config/modversions.h) \
     $(wildcard include/config/module/rel/crcs.h) \
     $(wildcard include/config/have/arch/prel32/relocations.h) \
-    $(wildcard include/config/modules.h) \
     $(wildcard include/config/trim/unused/ksyms.h) \
-    $(wildcard include/config/unused/symbols.h) \
   include/linux/compiler.h \
     $(wildcard include/config/trace/branch/profiling.h) \
     $(wildcard include/config/profile/all/branches.h) \
@@ -66,7 +90,6 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/kasan.h) \
   arch/x86/include/asm/barrier.h \
   arch/x86/include/asm/alternative.h \
-    $(wildcard include/config/smp.h) \
   arch/x86/include/asm/asm.h \
   arch/x86/include/asm/nops.h \
     $(wildcard include/config/mk7.h) \
@@ -78,8 +101,6 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/x86/alignment/16.h) \
   include/linux/bitops.h \
   include/linux/bits.h \
-  include/linux/const.h \
-  include/uapi/linux/const.h \
   arch/x86/include/asm/bitops.h \
     $(wildcard include/config/x86/cmov.h) \
   arch/x86/include/asm/rmwcc.h \
@@ -130,7 +151,6 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/dynamic/debug.h) \
   include/linux/init.h \
     $(wildcard include/config/strict/kernel/rwx.h) \
-    $(wildcard include/config/strict/module/rwx.h) \
   include/linux/kern_levels.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
@@ -141,32 +161,12 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/x86/internode/cache/shift.h) \
     $(wildcard include/config/x86/vsmp.h) \
   include/linux/dynamic_debug.h \
-    $(wildcard include/config/jump/label.h) \
   include/linux/jump_label.h \
     $(wildcard include/config/have/arch/jump/label/relative.h) \
   arch/x86/include/asm/jump_label.h \
   include/linux/build_bug.h \
   arch/x86/include/asm/div64.h \
   include/asm-generic/div64.h \
-  include/linux/module.h \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/modules/tree/lookup.h) \
-    $(wildcard include/config/livepatch.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/tree/srcu.h) \
-    $(wildcard include/config/bpf/events.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/function/error/injection.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
-  include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-    $(wildcard include/config/page/poisoning/zero.h) \
   include/linux/stat.h \
   arch/x86/include/uapi/asm/stat.h \
   include/uapi/linux/stat.h \
@@ -676,62 +676,37 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
   arch/x86/include/asm/orc_types.h \
-  include/linux/fs.h \
-    $(wildcard include/config/read/only/thp/for/fs.h) \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/security.h) \
-    $(wildcard include/config/cgroup/writeback.h) \
-    $(wildcard include/config/ima.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/fs/encryption.h) \
-    $(wildcard include/config/fs/verity.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/blk/dev/loop.h) \
-    $(wildcard include/config/fs/dax.h) \
-    $(wildcard include/config/block.h) \
-    $(wildcard include/config/mandatory/file/locking.h) \
-    $(wildcard include/config/migration.h) \
-    $(wildcard include/config/io/uring.h) \
-  include/linux/wait_bit.h \
+  include/linux/cdev.h \
   include/linux/kdev_t.h \
   include/uapi/linux/kdev_t.h \
-  include/linux/dcache.h \
-  include/linux/rculist.h \
-    $(wildcard include/config/prove/rcu/list.h) \
-  include/linux/rculist_bl.h \
-  include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
-  include/linux/lockref.h \
-    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
-  include/linux/stringhash.h \
-    $(wildcard include/config/dcache/word/access.h) \
-  include/linux/hash.h \
-    $(wildcard include/config/have/arch/hash.h) \
-  include/linux/path.h \
-  include/linux/list_lru.h \
-    $(wildcard include/config/memcg/kmem.h) \
-  include/linux/shrinker.h \
-  include/linux/pid.h \
-  include/linux/capability.h \
-  include/uapi/linux/capability.h \
-  include/linux/semaphore.h \
-  include/linux/fcntl.h \
-    $(wildcard include/config/arch/32bit/off/t.h) \
-  include/uapi/linux/fcntl.h \
-  arch/x86/include/generated/uapi/asm/fcntl.h \
-  include/uapi/asm-generic/fcntl.h \
-  include/uapi/linux/fiemap.h \
-  include/linux/migrate_mode.h \
-  include/linux/percpu-rwsem.h \
-  include/linux/rcuwait.h \
-  include/linux/rcu_sync.h \
-  include/linux/delayed_call.h \
-  include/linux/uuid.h \
-  include/uapi/linux/uuid.h \
-  include/linux/errseq.h \
-  include/linux/ioprio.h \
+  include/linux/device.h \
+    $(wildcard include/config/debug/devres.h) \
+    $(wildcard include/config/generic/msi/irq/domain.h) \
+    $(wildcard include/config/pinctrl.h) \
+    $(wildcard include/config/generic/msi/irq.h) \
+    $(wildcard include/config/dma/declare/coherent.h) \
+    $(wildcard include/config/dma/cma.h) \
+    $(wildcard include/config/arch/has/sync/dma/for/device.h) \
+    $(wildcard include/config/arch/has/sync/dma/for/cpu.h) \
+    $(wildcard include/config/arch/has/sync/dma/for/cpu/all.h) \
+    $(wildcard include/config/of.h) \
+    $(wildcard include/config/devtmpfs.h) \
+    $(wildcard include/config/sysfs/deprecated.h) \
+  include/linux/ioport.h \
+    $(wildcard include/config/io/strict/devmem.h) \
+  include/linux/klist.h \
+  include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  include/linux/hrtimer.h \
+    $(wildcard include/config/high/res/timers.h) \
+    $(wildcard include/config/time/low/res.h) \
+    $(wildcard include/config/timerfd.h) \
+  include/linux/hrtimer_defs.h \
+  include/linux/timerqueue.h \
+  include/linux/ratelimit.h \
   include/linux/sched.h \
     $(wildcard include/config/virt/cpu/accounting/native.h) \
     $(wildcard include/config/sched/info.h) \
@@ -756,6 +731,7 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/auditsyscall.h) \
     $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/ubsan.h) \
+    $(wildcard include/config/block.h) \
     $(wildcard include/config/task/xacct.h) \
     $(wildcard include/config/cpusets.h) \
     $(wildcard include/config/x86/cpu/resctrl.h) \
@@ -769,10 +745,14 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/kcov.h) \
     $(wildcard include/config/bcache.h) \
     $(wildcard include/config/vmap/stack.h) \
+    $(wildcard include/config/security.h) \
     $(wildcard include/config/gcc/plugin/stackleak.h) \
     $(wildcard include/config/arch/task/struct/on/stack.h) \
     $(wildcard include/config/debug/rseq.h) \
   include/uapi/linux/sched.h \
+  include/linux/pid.h \
+  include/linux/rculist.h \
+    $(wildcard include/config/prove/rcu/list.h) \
   include/linux/sem.h \
   include/uapi/linux/sem.h \
   include/linux/ipc.h \
@@ -791,12 +771,6 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
   include/uapi/linux/kcov.h \
   include/linux/plist.h \
     $(wildcard include/config/debug/plist.h) \
-  include/linux/hrtimer.h \
-    $(wildcard include/config/high/res/timers.h) \
-    $(wildcard include/config/time/low/res.h) \
-    $(wildcard include/config/timerfd.h) \
-  include/linux/hrtimer_defs.h \
-  include/linux/timerqueue.h \
   include/linux/seccomp.h \
     $(wildcard include/config/seccomp.h) \
     $(wildcard include/config/have/arch/seccomp/filter.h) \
@@ -834,6 +808,62 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
     $(wildcard include/config/posix/timers.h) \
   include/linux/alarmtimer.h \
   include/uapi/linux/rseq.h \
+  arch/x86/include/asm/device.h \
+    $(wildcard include/config/intel/iommu.h) \
+    $(wildcard include/config/amd/iommu.h) \
+    $(wildcard include/config/sta2x11.h) \
+    $(wildcard include/config/x86/dev/dma/ops.h) \
+    $(wildcard include/config/pci/domains.h) \
+  include/linux/pm_wakeup.h \
+  include/linux/fs.h \
+    $(wildcard include/config/read/only/thp/for/fs.h) \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/cgroup/writeback.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/fs/encryption.h) \
+    $(wildcard include/config/fs/verity.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/blk/dev/loop.h) \
+    $(wildcard include/config/fs/dax.h) \
+    $(wildcard include/config/mandatory/file/locking.h) \
+    $(wildcard include/config/migration.h) \
+    $(wildcard include/config/io/uring.h) \
+  include/linux/wait_bit.h \
+  include/linux/dcache.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  include/linux/stringhash.h \
+    $(wildcard include/config/dcache/word/access.h) \
+  include/linux/hash.h \
+    $(wildcard include/config/have/arch/hash.h) \
+  include/linux/path.h \
+  include/linux/list_lru.h \
+    $(wildcard include/config/memcg/kmem.h) \
+  include/linux/shrinker.h \
+  include/linux/capability.h \
+  include/uapi/linux/capability.h \
+  include/linux/semaphore.h \
+  include/linux/fcntl.h \
+    $(wildcard include/config/arch/32bit/off/t.h) \
+  include/uapi/linux/fcntl.h \
+  arch/x86/include/generated/uapi/asm/fcntl.h \
+  include/uapi/asm-generic/fcntl.h \
+  include/uapi/linux/fiemap.h \
+  include/linux/migrate_mode.h \
+  include/linux/percpu-rwsem.h \
+  include/linux/rcuwait.h \
+  include/linux/rcu_sync.h \
+  include/linux/delayed_call.h \
+  include/linux/uuid.h \
+  include/uapi/linux/uuid.h \
+  include/linux/errseq.h \
+  include/linux/ioprio.h \
   include/linux/sched/rt.h \
   include/linux/iocontext.h \
   include/linux/fs_types.h \
@@ -848,6 +878,7 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
   include/linux/projid.h \
   include/uapi/linux/quota.h \
   include/linux/nfs_fs_i.h \
+  include/linux/circ_buf.h \
   include/linux/slab.h \
     $(wildcard include/config/debug/slab.h) \
     $(wildcard include/config/failslab.h) \
@@ -858,37 +889,6 @@ deps_/home/afzal/driver/multi_driver/multiple_driver.o := \
   include/linux/percpu-refcount.h \
   include/linux/kasan.h \
     $(wildcard include/config/kasan/generic.h) \
-  include/linux/circ_buf.h \
-  include/linux/cdev.h \
-  include/linux/device.h \
-    $(wildcard include/config/debug/devres.h) \
-    $(wildcard include/config/generic/msi/irq/domain.h) \
-    $(wildcard include/config/pinctrl.h) \
-    $(wildcard include/config/generic/msi/irq.h) \
-    $(wildcard include/config/dma/declare/coherent.h) \
-    $(wildcard include/config/dma/cma.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/device.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/cpu.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/cpu/all.h) \
-    $(wildcard include/config/of.h) \
-    $(wildcard include/config/devtmpfs.h) \
-    $(wildcard include/config/sysfs/deprecated.h) \
-  include/linux/ioport.h \
-    $(wildcard include/config/io/strict/devmem.h) \
-  include/linux/klist.h \
-  include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  include/linux/ratelimit.h \
-  arch/x86/include/asm/device.h \
-    $(wildcard include/config/intel/iommu.h) \
-    $(wildcard include/config/amd/iommu.h) \
-    $(wildcard include/config/sta2x11.h) \
-    $(wildcard include/config/x86/dev/dma/ops.h) \
-    $(wildcard include/config/pci/domains.h) \
-  include/linux/pm_wakeup.h \
   include/linux/uaccess.h \
   arch/x86/include/asm/uaccess.h \
     $(wildcard include/config/x86/intel/usercopy.h) \
