@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/kernel_timer/timer.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/kernel_timer/timer.ko /home/afzal/driver/kernel_timer/timer.o /home/afzal/driver/kernel_timer/timer.mod.o;  true
