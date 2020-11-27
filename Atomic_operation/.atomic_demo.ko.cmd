@@ -1,0 +1,1 @@
+cmd_/home/afzal/driver/Atomic_operation/atomic_demo.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/afzal/driver/Atomic_operation/atomic_demo.ko /home/afzal/driver/Atomic_operation/atomic_demo.o /home/afzal/driver/Atomic_operation/atomic_demo.mod.o;  true
